@@ -22,6 +22,12 @@ window.addEventListener("DOMContentLoaded", () => {
 // funzione che prende un numero random e seleziona la cella con lo stesso numero
 const numeriRandom = []; // creo array dei numeri random che pusho dentro solo se non gia presenti
 const randomNumber = () => {
+  // si puo anche fare con do{...}while(condizione)
+  // fai numero random finche il numero estranno e' presente dentro l'array. quando non e' presente esci
+  // ed esegui il codice dopo
+  //   do {
+  //    const randomNumber = Math.round(Math.random() * 75);
+  //   } while (numeriRandom.includes(randomNumber));
   const random = Math.round(Math.random() * 75);
   if (numeriRandom.includes(random)) {
     // se array numeriRandom include il numero random appena uscito, fai riparitre la funzione
