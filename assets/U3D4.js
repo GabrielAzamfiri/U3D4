@@ -20,8 +20,16 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 
 // funzione che prende un numero random e seleziona la cella con lo stesso numero
+const numeriRandom = []; // creo array dei numeri random che pusho dentro solo se non gia presenti
 const randomNumber = () => {
   const random = Math.round(Math.random() * 75);
-  console.log(random);
-  arrayNumeri[random].classList.add("selected");
+  if (numeriRandom.includes(random)) {
+    // se array numeriRandom include il numero random appena uscito, fai riparitre la funzione
+    return randomNumber();
+  } else {
+    // altrimeti pusha dentro il nuovo numero random e usalo per aggiungere la classe selected alla cella
+    console.log(random);
+    numeriRandom.push(random);
+    arrayNumeri[random].classList.add("selected");
+  }
 };
