@@ -49,9 +49,9 @@ h2 {
 button {
   cursor: pointer;
   background-color: red;
-
+  font-size: 23px;
   color: #efd7f5;
-  width: 130px;
+  width: 160px;
   min-height: 56px;
   font-weight: 700;
 }
